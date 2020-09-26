@@ -31,8 +31,8 @@ for (i of addB){
 		count++;
 		countShop.innerHTML = count
 		console.log(i);
-		foodArr.push({name: event.explicitOriginalTarget.offsetParent.firstElementChild.lastElementChild.textContent,
-					price: parseInt(event.explicitOriginalTarget.offsetParent.children[2].textContent)})
+		foodArr.push({name: event.target.previousElementSibling.lastElementChild.textContent,
+					price: parseInt(event.target.nextElementSibling.textContent)})
 	})
 
 /*{name: i.previousElementSibling.lastElementChild.textContent,
