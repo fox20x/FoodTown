@@ -27,7 +27,7 @@ call.addEventListener(checkOut(), function() {callClick(70, 'none')})
 
 let foodArr = [];
 for (i of addB){
-	i.addEventListener("click", (event) => {
+	i.addEventListener("click", function(event) {
 		count++;
 		countShop.innerHTML = count
 		foodArr.push({name: event.currentTarget.previousElementSibling.lastElementChild.textContent,
