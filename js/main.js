@@ -27,16 +27,13 @@ call.addEventListener(checkOut(), function() {callClick(70, 'none')})
 
 let foodArr = [];
 for (i of addB){
-	i.addEventListener("click", () => {
+	i.addEventListener("click", (event) => {
 		count++;
 		countShop.innerHTML = count
-		console.log(i);
-		foodArr.push({name: event.target.previousElementSibling.lastElementChild.textContent,
-					price: parseInt(event.target.nextElementSibling.textContent)})
+		foodArr.push({name: event.currentTarget.previousElementSibling.lastElementChild.textContent,
+					price: parseInt(event.currentTarget.nextElementSibling.textContent)})
 	})
 
-/*{name: i.previousElementSibling.lastElementChild.textContent,
-					price: parseInt(i.nextElementSibling.textContent)}*/
 }
 //burger
 burger.addEventListener("touchstart", () => {
